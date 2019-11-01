@@ -1,4 +1,4 @@
-# vue_reactivity
+# Vue Reactivity example
 
 ## Project setup
 ```
