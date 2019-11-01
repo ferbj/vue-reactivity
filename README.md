@@ -1,4 +1,4 @@
-# vue_crash
+# vue_reactivity
 
 ## Project setup
 ```
