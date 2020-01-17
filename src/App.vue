@@ -3,7 +3,7 @@
     <div class="container">
       <Header />
       <AddItem v-on:add-item="addItem"/>
-      <List v-bind:items="items"/>
+      <List v-bind:items="items" v-on:del-item="delItem" />
     </div>
 </div>
 </template>
@@ -45,8 +45,10 @@ export default {
   methods: {
     addItem(newItem){
       this.items = [...this.items,newItem]
+    },
+    delItem(id) {
+      this.items = this.items.filter(item => item.id !== id);
     }
-
   }
 }
 
