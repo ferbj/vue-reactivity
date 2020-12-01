@@ -11,7 +11,7 @@
 	</div>
 </template>
 <script>
-	import uuid from 'uuid';
+	import {v4 as uuidv4 } from 'uuid';
 	export default{
 		name: "AddItem",
 		data(){
@@ -24,7 +24,7 @@
 			addItem(){
 				let bool = Math.random() >= 0.5;
 				const newItem = {
-					id : uuid.v4(),
+					id : uuidv4(),
 					title:this.title, 
 					completed: bool
 				}
