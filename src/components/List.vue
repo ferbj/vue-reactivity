@@ -10,16 +10,8 @@
       <tr v-for="item in items" :key="item.id" class="text-center">
         <td class="w-25">{{ item.id }}</td>
         <td class="w-25">{{ item.title }}</td>
-        <td
-          v-bind:class="{'alert-success':item.completed==true,'alert-danger':item.completed==false}"
-          class="w-25"
-        >
-          <input
-            type="checkbox"
-            v-on:change="markComplete"
-            v-model="item.completed"
-            v-bind:checked="item.completed==true"
-          />
+        <td v-bind:class="{'alert-success':item.completed==true,'alert-danger':item.completed==false}" class="w-25" >
+          <input type="checkbox" v-on:change="markComplete" v-model="item.completed" v-bind:checked="item.completed==true" />
         </td>
         <td>
           <button @click="delitem(item.id)">
@@ -34,7 +26,7 @@
 <script>
 export default {
   name: "List",
-  props: ["items"],
+  props: ["items"], 
 
   methods: {
     markComplete: function() {
